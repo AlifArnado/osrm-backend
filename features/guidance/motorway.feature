@@ -176,11 +176,11 @@ Feature: Motorway Guidance
             | chi    | motorway_link |
 
        When I route I should get
-            | waypoints | route           | turns                                |
-            | a,e       | abcde,abcde     | depart,arrive                        |
-            | f,e       | fgc,abcde,abcde | depart,merge slight left,arrive      |
-            | a,i       | abcde,chi,chi   | depart,off ramp slight right,arrive |
-            | f,i       | fgc,chi,chi     | depart,off ramp right,arrive        |
+            | waypoints | route           | turns                              |
+            | a,e       | abcde,abcde     | depart,arrive                      |
+            | f,e       | fgc,abcde,abcde | depart,merge slight left,arrive    |
+            | a,i       | abcde,chi,chi   | depart,on ramp slight right,arrive |
+            | f,i       | fgc,chi,chi     | depart,off ramp right,arrive       |
 
     Scenario: On And Off Ramp Left
        Given the node map
@@ -194,11 +194,11 @@ Feature: Motorway Guidance
             | chi    | motorway_link |
 
        When I route I should get
-            | waypoints | route           | turns                               |
-            | a,e       | abcde,abcde     | depart,arrive                       |
-            | f,e       | fgc,abcde,abcde | depart,merge slight right,arrive    |
-            | a,i       | abcde,chi,chi   | depart,off ramp slight left,arrive |
-            | f,i       | fgc,chi,chi     | depart,off ramp left,arrive        |
+            | waypoints | route           | turns                             |
+            | a,e       | abcde,abcde     | depart,arrive                     |
+            | f,e       | fgc,abcde,abcde | depart,merge slight right,arrive  |
+            | a,i       | abcde,chi,chi   | depart,on ramp slight left,arrive |
+            | f,i       | fgc,chi,chi     | depart,off ramp left,arrive       |
 
     Scenario: Merging Motorways
         Given the node map
